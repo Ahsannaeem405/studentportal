@@ -56,72 +56,48 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
 @section('content')
 <div class="container con1">
+
+    <?php
+$id = Auth::user()->id;
+try {
+
+    $pdo =   pdo();
+
+    $sql = 'SELECT * FROM  users JOIN  appointments ON users.id=appointments.AdvisorID Where stuID ='. $id.'';
+    // SELECT users.name FROM users JOIN appointments ON users.id=appointments.stuID
+
+    $q = $pdo->query($sql);
+    $q->setFetchMode(PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+    die("Could not connect to the database $dbname :" . $e->getMessage());
+}
+
+?>
     <!-- Button trigger modal -->
     <div class="row">
         <div class="col-lg-12 col-12">
-            <button type="button" class="btn btn-primary booking" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            {{-- <button type="button" class="btn btn-primary booking" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Start Booking
-              </button>
+              </button> --}}
 
               <!-- Modal -->
-              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">Booking</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="container modal_container">
-                            <p id="click">Please click to select Advisor <i class="fas fa-chevron-down" style="float: right"></i></p>
-                            <div class="select">
-                               <div class="advisor">
-                                   <div class="row advisor_div">
-                                       <div class="col-lg-2 col-4">
-                                           <img src="{{asset('images/avatar.png')}}" alt="" style="width: 50%">
-                                       </div>
-                                       <div class="col-lg-8 col-8" style="padding-top: 10px;text-align:center;">
-                                        <p>Talha</p>
-                                       </div>
 
-                                       {{-- <div class="col-lg-2" style="padding-top: 30px">
-                                           <button class="btn btn-success">Book</button>
-                                       </div> --}}
-                                   </div>
-                               </div>
-                               <div class="advisor">
-                                <div class="row advisor_div">
-                                    <div class="col-lg-2 col-4">
-                                        <img src="{{asset('images/avatar.png')}}" alt="" style="width: 50%">
-                                    </div>
-                                    <div class="col-lg-8 col-8" style="padding-top: 10px;text-align:center;">
-                                     <p>Usman</p>
-                                    </div>
-
-                                    {{-- <div class="col-lg-2" style="padding-top: 30px">
-                                        <button class="btn btn-success">Book</button>
-                                    </div> --}}
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Book</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
         </div>
         <div class="col-lg-12" style="padding: 20px">
+
+        @if(session()->has('success'))
+        <div class="alert alert-success">
+            {{ session()->get('success') }}
+        </div>
+    @endif
             <div class="table-responsive">
                 <table class="table">
                     <thead>
                       <tr>
                         <th scope="col">#</th>
                         <th scope="col">Advisor Name</th>
-                        <th scope="col">Booking Time</th>
+                        <th scope="col">Booking Start Time</th>
+                        <th scope="col">Booking End Time</th>
                         <th scope="col">Booking Date</th>
                         <th scope="col">Status</th>
                         <th scope="col">Action</th>
@@ -130,33 +106,30 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
+                      {{-- <tr>
                         <th scope="row">1</th>
                         <td>Mark</td>
                         <td>11:40 PM</td>
                         <td>11-02-2021</td>
                         <td>Pending</td>
-                        <td><button class="btn btn-danger"  onclick="return confirm('Are you sure you want to Cancle your Booking?');" >Cancle</button></td>
 
-                      </tr>
+                      </tr> --}}
+
+
+                      <?php while ($row = $q->fetch()): ?>
                       <tr>
-                        <th scope="row">2</th>
-                        <td>Mark</td>
-                        <td>11:40 PM</td>
-                        <td>11-02-2021</td>
-                        <td>Pending</td>
-                        <td><button class="btn btn-danger" onclick="return confirm('Are you sure you want to Cancle your Booking?');" >Cancle</button></td>
+                        <th scope="row">1</th>
+                        <td><?php echo htmlspecialchars($row['name']) ?></td>
+                        <td><?php echo htmlspecialchars($row['appt_start_time']) ?></td>
+                        <td><?php echo htmlspecialchars($row['appt_end_time']) ?></td>
+                    <td><?php echo htmlspecialchars($row['appt_date']) ?></td>
+                    <td><?php echo htmlspecialchars($row['status']) ?></td>
+                          <td><a href=" {{url('cancel',htmlspecialchars($row['id']))}}" class="btn btn-danger"  onclick="return confirm('Are you sure you want to Cancle your Booking?');" >Cancel</a></td>
 
                       </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td>Mark</td>
-                        <td>11:40 PM</td>
-                        <td>11-02-2021</td>
-                        <td>Pending</td>
-                        <td><button class="btn btn-danger" onclick="return confirm('Are you sure you want to Cancle your Booking?');" >Cancle</button></td>
 
-                      </tr>
+                      <?php endwhile; ?>
+
                     </tbody>
                   </table>
               </div>

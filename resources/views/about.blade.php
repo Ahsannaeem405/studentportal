@@ -25,19 +25,17 @@
             <img src="assets/img/about.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+            <h3>
+                24/7 advisors to speak to !</h3>
             <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+
             </p>
-            <ul>
-              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-            </ul>
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-            </p>
+            you maybe thinking about joining a gang just to feel like you have a place , a gang is not a real home , you might be thinking of retaliating
+            after someone embarrassed you , you might be even be thinking to take your own life , these are not solutions the worlds always going to have
+            people like this but the world also has kind hearted people to help you out of tuff times don't give into this delusion that this will fix your
+            problems it wont , you must become the best version of yourself , you are youth you still have time to become something great in life ,
+            perhaps go down in history , its all at your finger tips ,can you envision yourself in a life of bliss happiness and success , to turn around and
+            look at life knowing you have done something you could never even dreamed of ! only you can stop yourself don't stop yourself, conquer your own world no one can stop you.  fight on hold on take it as fuel for your future as propulsion for this rocket called your life you can do it!.
 
           </div>
         </div>

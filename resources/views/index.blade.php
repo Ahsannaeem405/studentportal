@@ -12,6 +12,18 @@
         padding-left: 50px !important;
     }
 
+
+
+        .modal-backdrop {
+            position: relative !important;
+            top: 0;
+            left: 0;
+            z-index: 1050;
+            width: 100vw;
+            height: 100vh;
+            background-color: #000;
+        }
+
 </style>
   @section('content')
 
@@ -53,21 +65,21 @@
 
         <div class="row">
           <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+            <img src="{{asset('images/child-abuse.jpg')}}" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+            <h3>gang facts did you know?</h3>
             <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+                Once viewed as a metropolitan issue, gang savagery has spread to more modest urban communities, towns, and rustic regions.
             </p>
             <ul>
-              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+              <li><i class="bi bi-check-circle"></i>There are in excess of 24,500 distinct youth gangs around the country, with in excess of 772,500 teen and youthful grown-up individuals.</li>
+              <li><i class="bi bi-check-circle"></i>A pack is characterized collectively of individuals who participate in joint rough, unlawful, or crime.</li>
+              <li><i class="bi bi-check-circle"></i> Posses as a rule distinguish themselves with a typical name and images. </li>
             </ul>
             <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                Examination has assessed that young people who are gangsters are bound to perpetrate genuine and savage violations and are bound to be survivors of manslaughter than non-gangsters. There has been a lofty expansion in group movement in the US since the 1970's, however starting around 1996 pack enrollment has diminished besides in urban areas with populaces of more than 25,000. The normal period of gangsters is around 17 to 18 years. Around half of all gangsters are 18 or more established; these more seasoned gangsters are substantially more liable to be engaged with genuine and rough wrongdoings. Females are less inclined to be associated with posses than guys, in any case, one 11-city study of eighth-graders observed that 38% of gangsters were female. Further examination has shown that 78% of female gangsters have been associated with pack battles and 39 percent have assaulted somebody with a weapon. Young people join posses for a many reasons, including energy and a feeling of having a place. Ideas are presented for getting teens far from groups, like tracking down sure ways of investing energy, keeping away from gangsters, and not conveying weapons. Accommodating connections are presented for more data about posses and how to avoid them.
+
             </p>
 
           </div>
@@ -118,37 +130,37 @@
           <div class="col-lg-4 d-flex align-items-stretch">
             <div class="content">
               <h3>Why Choose Our Advisors?</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-                Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus optio ad corporis.
+              <p> <br>
+                24/7 advisors to speak to !
+                you maybe thinking about joining a gang just to feel like you have a place , a gang is not a real home , you might be thinking of retaliating
+after someone embarrassed you , you might be even be thinking to take your own life ,
               </p>
               <div class="text-center">
-                <a href="about.html" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+                <a href="{{url('about')}}" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
               </div>
             </div>
           </div>
           <div class="col-lg-8 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-boxes d-flex flex-column justify-content-center">
               <div class="row">
-                <div class="col-xl-4 d-flex align-items-stretch">
+                <div class="col-xl-4 col-md-12 col-sm-12 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="bx bx-receipt"></i>
-                    <h4>Corporis voluptates sit</h4>
-                    <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                    <h4>                    <iframe style="width:100%; height:70%" src="https://www.youtube.com/embed/siFPHXxYCZI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </h4>
                   </div>
                 </div>
-                <div class="col-xl-4 d-flex align-items-stretch">
+                <div class="col-xl-4  col-md-12 col-sm-12 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="bx bx-cube-alt"></i>
-                    <h4>Ullamco laboris ladore pan</h4>
-                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                    <h4><iframe style="width:100%; height:70%" src="https://www.youtube.com/embed/xKljINIUn6Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></h4>
+
                   </div>
                 </div>
-                <div class="col-xl-4 d-flex align-items-stretch">
+                <div class="col-xl-4 col-md-12 col-sm-12 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="bx bx-images"></i>
-                    <h4>Labore consequatur</h4>
-                    <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                    <h4><iframe style="width:100%; height:70%" src="https://www.youtube.com/embed/uMqLq8iOURE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></h4>
                   </div>
                 </div>
               </div>
@@ -228,6 +240,19 @@
       </div>
     </section><!-- End Features Section -->
 
+    <?php
+
+    try {
+        $pdo =   pdo();
+        $sql = 'SELECT * FROM users WHERE role = 1';
+
+        $q = $pdo->query($sql);
+        $q->setFetchMode(PDO::FETCH_ASSOC);
+    } catch (PDOException $e) {
+        die("Could not connect to the database $dbname :" . $e->getMessage());
+    }
+
+    ?>
 
 
 
@@ -240,60 +265,93 @@
             {{-- <p>Popular Courses</p> --}}
           </div>
 
-        <div class="row" data-aos="zoom-in" data-aos-delay="100">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member">
-              <img src="assets/img/trainers/trainer-1.jpg" class="img-fluid" alt="">
-              <div class="member-content">
-                <h4>Walter White</h4>
-                <span>Web Development</span>
-                <p>
-                  Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
-                </p>
-                <div class="social">
-                 <button class="btn btn-primary">Book Now</button>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div class="row" data-aos="zoom-in" data-aos-delay="100">
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member">
-              <img src="assets/img/trainers/trainer-2.jpg" class="img-fluid" alt="">
-              <div class="member-content">
-                <h4>Sarah Jhinson</h4>
-                <span>Marketing</span>
-                <p>
-                  Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
-                </p>
-                <div class="social">
-                    <button class="btn btn-primary">Book Now</button>
+            @if (session()->has('success'))
+                <div class="alert alert-success">
+                    {{ session()->get('success') }}
                 </div>
-              </div>
-            </div>
-          </div>
+            @endif
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member">
-              <img src="assets/img/trainers/trainer-3.jpg" class="img-fluid" alt="">
-              <div class="member-content">
-                <h4>William Anderson</h4>
-                <span>Content</span>
-                <p>
-                  Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
-                </p>
-                <div class="social">
-                    <button class="btn btn-primary">Book Now</button>
+
+            <?php while ($row = $q->fetch()): ?>
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                <div class="member">
+                    <img src="assets/img/trainers/trainer-1.jpg" class="img-fluid" alt="">
+                    <div class="member-content">
+                        <h4><?php echo htmlspecialchars($row['name']); ?></h4>
+                        <span><?php echo htmlspecialchars($row['email']); ?></span>
+                        <p>
+                            Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis
+                            quaerat qui aut aut aut
+                        </p>
+                        <div class="social">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal<?php echo htmlspecialchars($row['id']); ?>">
+                                Ask for Appointment
+                            </button>
+
+
+
+
+
+
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-          <div class="col-lg-12" style="text-align: center">
-              <a href="{{url('/advisor')}}" class="btn btn-primary btn_seeall">See All</a>
-          </div>
+
+
+
+
+            <div class="modal fade" style="margin-top: 136px;" id="exampleModal<?php echo htmlspecialchars($row['id']); ?>"
+                tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content" style="margin-top: 58px;">
+                        <form action="{{ route('appointment') }}" method="POST" enctype="multipart/form-data">
+                            @csrf
+                            <div class="modal-header">
+
+                                <h5 class="modal-title" id="exampleModalLabel">Advisors</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+
+                            <div class="modal-body">
+
+                                <div class="container">
+                                    <select name="advis" id="" class="form-control">
+                                        <option value="">Current Advisor</option>
+                                        <option value="<?php echo htmlspecialchars($row['name']); ?>"><?php echo htmlspecialchars($row['name']); ?></option>
+
+                                    </select><br>
+                                    <label for="">Start Time</label>
+                                    <input type="time" name="start_time" class="form-control"><br>
+                                    <label for="">End Time</label>
+                                    <input type="time" name="end_time" class="form-control"><br>
+                                    <label for="">Date ofAppointment</label>
+                                    <input type="date" name="date" class="form-control"><br>
+                                    <input type="hidden" name="id" value="<?php echo htmlspecialchars($row['id']); ?>" id="">
+                                </div>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary"
+                                    data-bs-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-primary">Set Appointments</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <?php endwhile; ?>
+
 
         </div>
-
       </div>
     </section><!-- End Trainers Section -->
 

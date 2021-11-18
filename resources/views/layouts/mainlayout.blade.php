@@ -27,15 +27,10 @@
   <link href="{{asset('assets/vendor/remixicon/remixicon.css')}}" rel="stylesheet">
   <link href="{{asset('assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
   <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Mentor - v4.6.1
-  * Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+
+
   @show
 </head>
 <style>
@@ -46,44 +41,7 @@
     padding: 10px 20px 10px 20px !important;
     color: #0C4879 !important;
     }
-    /* .footer_link{
-        border-bottom: 1px solid #2179BB !important;
-        padding: 30px 90px 30px 90px;
-    }
-    .a_tag{
-        color: #2179BB;
 
-    }
-    .a_tag:hover{
-       color: #0C4879 ;
-    }
-    .border_link{
-        border-left: 1px solid #2179BB;
-        text-align: center;
-    } */
-
-
-
-    /* .icons-twitter {
-    position: fixed;
-    width: 50px;
-    height: 50px;
-    bottom: 40px;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 30px;
-    background:white;
-    left: 15px;
-    z-index: 100;
-    color: skyblue;
-}
-.icons-twitter:hover{
-    color: #0C4879;
-}
-
-.my-float {
-    margin-top: 10px;
-} */
 </style>
 
 <body>
@@ -93,8 +51,6 @@
     <div class="container d-flex align-items-center">
 
       <a href="{{url('/')}}" class=" logo me-auto navbar-brand"><img src="{{asset('images/Student-Portal.png')}}" alt="" style="max-height: 70px"></a>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
@@ -102,7 +58,35 @@
           <li><a href="{{url('/about')}}">About</a></li>
           <li><a href="{{url('/contact')}}">Contact us</a></li>
           <li><a href="{{url('/privacy')}}">Rules</a></li>
-          <li><a href="{{url('/login')}}">Login</a></li>
+
+
+          @if (Auth::check())
+          @if (Auth::user()->role == 1)
+          <li><a href="{{url('/advisor_booking')}}">Advisor Booking</a></li>
+          @else
+          <li><a href="{{url('/booking')}}">Booking</a></li>
+
+          @endif
+          <li><a href="{{url('/profile')}}">Profie</a></li>
+
+          <li>
+
+            <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                 document.getElementById('logout-form').submit();">
+                {{ __('Logout') }}
+            </a>
+
+            <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                class="d-none">
+                @csrf
+            </form>
+
+        </li>
+        @else
+
+        <li><a href="{{url('/login')}}">Login</a></li>
+
+          @endif
 
 
 
@@ -110,15 +94,15 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="{{url('/register')}}" class="get-started-btn">Join Us</a>
 
+      @if (!Auth::check())
+
+
+    <a href="{{url('/register')}}" class="get-started-btn">Join Us</a>
+
+    @endif
     </div>
-  </header><!-- End Header -->
-    {{-- <a href="#" class="twitter icons-twitter "><i class="bx bxl-twitter my-float"></i></a> --}}
-    {{-- <a href="#" class="facebook icons"><i class="bx bxl-facebook my-float"></i></a>
-    <a href="#" class="instagram icons"><i class="bx bxl-instagram my-float"></i></a>
-    <a href="#" class="google-plus icons"><i class="bx bxl-skype my-float"></i></a>
-    <a href="#" class="linkedin icons"><i class="bx bxl-linkedin my-float"></i></a> --}}
+  </header>
 
 @show
 
@@ -154,17 +138,7 @@
             </ul>
           </div>
 
-          {{-- <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
 
-              <li><i class="bx bx-chevron-right"></i> <a href="{{url('/')}}">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{{url('/about')}}">About</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{{url('/contact')}}">Contact us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{{url('/privacy')}}">Rules</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{{url('/login')}}">Login</a></li>
-            </ul>
-          </div> --}}
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Join Our Newsletter</h4>
@@ -176,26 +150,6 @@
 
         </div>
 
-        {{-- <div class="row footer_link">
-            <div class="col-lg-2  " >
-                <a href="{{url('/')}}" class="a_tag">Home</a>
-            </div>
-            <div class="col-lg-2 col-6 border_link " >
-                <a href="{{url('/about')}}" class="a_tag">About</a>
-            </div>
-            <div class="col-lg-2 col-6 border_link " >
-                <a href="{{url('/contact')}}" class="a_tag">Contact us</a>
-            </div>
-            <div class="col-lg-2 col-6 border_link " >
-                <a href="{{url('/privacy')}}" class="a_tag">Rules</a>
-            </div>
-            <div class="col-lg-2 col-6 border_link " >
-                <a href="{{url('/login')}}" class="a_tag">Login</a>
-            </div>
-            <div class="col-lg-2 col-6 border_link" >
-                <a href="{{url('/advisors')}}" class="a_tag">Advisors</a>
-            </div>
-        </div> --}}
       </div>
     </div>
 
@@ -206,10 +160,7 @@
           &copy; Copyright <strong><span>StudentPortal</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/ -->
+
           Designed by <a href="http://browntech.co/">Browntech.Int</a>
         </div>
       </div>
