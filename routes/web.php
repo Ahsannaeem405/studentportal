@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 // Route:: prefix('/user')->middleware(['auth', 'admin'])->group(function () {
 
-Route::get('/', function () {
+Route::get('/index', function () {
     // dd(1);
     return view('index');
 });

@@ -50,11 +50,11 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <a href="{{url('/')}}" class=" logo me-auto navbar-brand"><img src="{{asset('images/Student-Portal.png')}}" alt="" style="max-height: 70px"></a>
+      <a href="{{url('/index')}}" class=" logo me-auto navbar-brand"><img src="{{asset('images/Student-Portal.png')}}" alt="" style="max-height: 70px"></a>
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a href="{{url('/')}}" class="active1">Home</a></li>
+          <li><a href="{{url('/index')}}" class="active1">Home</a></li>
           <li><a href="{{url('/about')}}">About</a></li>
           <li><a href="{{url('/contact')}}">Contact us</a></li>
           <li><a href="{{url('/privacy')}}">Rules</a></li>
@@ -129,7 +129,7 @@
           <div class="col-lg-5 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-                <li><i class="bx bx-chevron-right"></i> <a href="{{url('/')}}">Home</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="{{url('/index')}}">Home</a></li>
                 <li><i class="bx bx-chevron-right"></i> <a href="{{url('/about')}}">About</a></li>
                 <li><i class="bx bx-chevron-right"></i> <a href="{{url('/contact')}}">Contact us</a></li>
                 <li><i class="bx bx-chevron-right"></i> <a href="{{url('/privacy')}}">Rules</a></li>
