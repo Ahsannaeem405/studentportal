@@ -356,6 +356,21 @@ after someone embarrassed you , you might be even be thinking to take your own l
     </section><!-- End Trainers Section -->
 
   </main><!-- End #main -->
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+
+
+        $('.nav-item').removeClass("active1");
+    $('#homee').addClass("active1");
+
+
+    });
+</script>
+
 @endsection
 
 

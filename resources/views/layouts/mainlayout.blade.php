@@ -52,24 +52,31 @@
 
       <a href="{{url('/index')}}" class=" logo me-auto navbar-brand"><img src="{{asset('images/Student-Portal.png')}}" alt="" style="max-height: 70px"></a>
 
+
+
+
+
+
+
+
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a href="{{url('/index')}}" class="active1">Home</a></li>
-          <li><a href="{{url('/about')}}">About</a></li>
-          <li><a href="{{url('/contact')}}">Contact us</a></li>
-          <li><a href="{{url('/privacy')}}">Rules</a></li>
+          <li class="nav-item"><a href="{{url('/index')}}" id="homee" class=" nav-link">Home</a></li>
+          <li  class="nav-item"><a href="{{url('/about')}}" id="About"  class="nav-link" >About</a></li>
+          <li  class="nav-item"><a href="{{url('/contact')}}" id="Contact" class="nav-link">Contact us</a></li>
+          <li  class="nav-item"><a href="{{url('/privacy')}}" id="Rules" class="nav-link">Rules</a></li>
 
 
           @if (Auth::check())
           @if (Auth::user()->role == 1)
-          <li><a href="{{url('/advisor_booking')}}">Advisor Booking</a></li>
+          <li  class="nav-item"><a  href="{{url('/advisor_booking')}}" class="nav-link" id="Advisor">Advisor Booking</a></li>
           @else
-          <li><a href="{{url('/booking')}}">Booking</a></li>
+          <li  class="nav-item"><a href="{{url('/booking')}}" class="nav-link" id="Booking">Booking</a></li>
 
           @endif
-          <li><a href="{{url('/profile')}}">Profie</a></li>
+          <li  class="nav-item"><a href="{{url('/profile')}}" id="Profie" class="nav-link">Profie</a></li>
 
-          <li>
+          <li  class="nav-item">
 
             <a href="{{ route('logout') }}" onclick="event.preventDefault();
                                  document.getElementById('logout-form').submit();">
@@ -84,7 +91,7 @@
         </li>
         @else
 
-        <li><a href="{{url('/login')}}">Login</a></li>
+        <li class="nav-item"><a class="nav-link"  id="login" href="{{url('/login')}}">Login</a></li>
 
           @endif
 
@@ -98,7 +105,7 @@
       @if (!Auth::check())
 
 
-    <a href="{{url('/register')}}" class="get-started-btn">Join Us</a>
+    <a href="{{url('/register')}}" id="Join" class="get-started-btn">Join Us</a>
 
     @endif
     </div>
@@ -187,6 +194,7 @@
 
   <!-- Template Main JS File -->
   <script src="{{asset('assets/js/main.js')}}"></script>
+
 
 </body>
 </html>

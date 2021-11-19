@@ -82,4 +82,16 @@
   </main><!-- End #main -->
 
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+  <script>
+    $(document).ready(function () {
+
+        $('.nav-item').removeClass("active1");
+    $('#Rules').addClass("active1");
+
+
+    });
+  </script>
   @endsection

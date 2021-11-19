@@ -182,4 +182,20 @@ $adv = App\Models\User::where('id', Auth::user()->id)->first();
 </form>
     </div>
 </div>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+<script>
+  $(document).ready(function () {
+
+      $('.nav-item').removeClass("active1");
+  $('#Profie').addClass("active1");
+
+
+  });
+</script>
 @endsection

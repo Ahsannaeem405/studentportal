@@ -187,4 +187,15 @@ $(document).ready(function(){
 });
 
 </script>
+
+<script>
+    $(document).ready(function () {
+
+
+        $('.nav-item').removeClass("active1");
+    $('#Advisor').addClass("active1");
+
+
+    });
+</script>
 @endsection
