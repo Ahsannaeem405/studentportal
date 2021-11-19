@@ -24,25 +24,33 @@ class AdvisorController extends Controller
     public function index(Request $request)
     {
 
+        // dd($_FILES["img "]["name"]);
 
         $user = User::find(Auth::user()->id);
 
-        // dd($user->password);
+
 
         if (Hash::check($request->password, $user->password)) {
+
+            $target_dir = "images/";
+            $target_file = $target_dir . basename($_FILES["img"]["name"]);
+            $img=$_FILES["img"]["name"];
+            move_uploaded_file($_FILES["img"]["tmp_name"], $target_file);
+
+            dd(   $img);
 
             $new =   Hash::make($request->cpassword);
             $pdo =   pdo();
 
             $sql = "UPDATE users SET name=?, email=?, number=?, password=?, mon_start_time=?, mon_end_time=?, tue_start_time=?, tue_end_time=?,
         wed_start_time=?, wed_end_time=?, thu_start_time=?, thu_end_time=?, fri_start_time=?, fri_end_time=?,
-        sat_start_time=?, sat_end_time=?, sun_start_time=?, sun_end_time=? WHERE id=?";
+        sat_start_time=?, sat_end_time=?, sun_start_time=?, sun_end_time=?, img=? WHERE id=?";
             $stmt = $pdo->prepare($sql);
             $stmt->execute([
                 $request->name, $request->email, $request->number,  $new, $request->mon_start_time, $request->mon_end_time,
                 $request->tue_start_time, $request->tue_end_time, $request->wed_start_time, $request->wed_end_time, $request->thu_start_time,
                 $request->thu_end_time,   $request->fri_start_time,  $request->fri_end_time, $request->sat_start_time, $request->sat_end_time,
-                $request->sun_start_time,  $request->sun_end_time,  Auth::user()->id
+                $request->sun_start_time,  $request->sun_end_time,  $img,  Auth::user()->id
             ]);
 
             return back()->with('success', 'Updated Successfully');

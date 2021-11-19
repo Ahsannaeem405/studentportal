@@ -74,7 +74,7 @@
           <li  class="nav-item"><a href="{{url('/booking')}}" class="nav-link" id="Booking">Booking</a></li>
 
           @endif
-          <li  class="nav-item"><a href="{{url('/profile')}}" id="Profie" class="nav-link">Profie</a></li>
+          <li  class="nav-item"><a href="{{url('/profile')}}" id="Profie" class="nav-link">Profile</a></li>
 
           <li  class="nav-item">
 

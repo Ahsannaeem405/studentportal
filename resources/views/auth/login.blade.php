@@ -345,6 +345,7 @@ border-radius: 5px;
       <!-- Icon -->
       <div class="fadeIn first">
         <img src="{{asset('images/Student-Portal.png')}}" id="icon" alt="User Icon" />
+
       </div>
 
       <!-- Login Form -->

@@ -45,6 +45,9 @@ class User extends Authenticatable
         'sun_start_time',
         'sun_end_time',
 
+        'img',
+
+
 
     ];
 

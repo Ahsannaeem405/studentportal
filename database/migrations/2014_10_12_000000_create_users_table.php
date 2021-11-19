@@ -43,6 +43,10 @@ class CreateUsersTable extends Migration
             $table->string('sun_start_time')->nullable();
             $table->string('sun_end_time')->nullable();
 
+            $table->string('img')->nullable();
+
+
+
 
             $table->rememberToken();
             $table->timestamps();

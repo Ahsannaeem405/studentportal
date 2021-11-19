@@ -36,13 +36,19 @@ $adv = App\Models\User::where('id', Auth::user()->id)->first();
         <div class="container con1">
             <div class="row" style="padding:35px;">
                 <div class="col-lg-12 col-12" style="text-align: center;">
-                    <img src="{{ asset('images/avatar.png') }}" class=" img">
+                    {{-- <img src="{{ asset('images/avatar.png') }}" class=" img"> --}}
+
                 </div>
                 @if (session()->has('success'))
                     <div class="alert alert-success">
                         {{ session()->get('success') }}
                     </div>
                 @endif
+
+                <div class="col-lg-6 col-sm-6 col-12" style="padding:20px">
+                    <label>Image:</label>
+                    <input type="file" name="img" class="form-control"  >
+                </div>
                 <div class="col-lg-6 col-sm-6 col-12" style="padding:20px">
                     <label>Name:</label>
                     <input type="text" name="name" value="{{ $adv->name }}" class="form-control" placeholder="Name">
