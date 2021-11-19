@@ -47,7 +47,7 @@ $adv = App\Models\User::where('id', Auth::user()->id)->first();
 
                 <div class="col-lg-6 col-sm-6 col-12" style="padding:20px">
                     <label>Image:</label>
-                    <input type="file" name="img" class="form-control"  >
+                    <input required type="file" name="img" class="form-control"  >
                 </div>
                 <div class="col-lg-6 col-sm-6 col-12" style="padding:20px">
                     <label>Name:</label>
