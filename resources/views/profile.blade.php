@@ -194,7 +194,7 @@ $adv = App\Models\User::where('id', Auth::user()->id)->first();
 
 
                 <div class="">
-                    <div class="col-12" style="margin: auto;text-align: end;padding-right: 20px;">
+                    <div class="col-12" style="margin: auto;text-align: end;">
                         <button type="submit" class="btn btn-primary">Submit </button>
                     </div>
 
