@@ -66,6 +66,8 @@
           <li  class="nav-item"><a href="{{url('/contact')}}" id="Contact" class="nav-link">Contact us</a></li>
           <li  class="nav-item"><a href="{{url('/privacy')}}" id="Rules" class="nav-link">Rules</a></li>
 
+          <li  class="nav-item"><a href="{{url('/chat')}}" id="chat" class="nav-link">Chat</a></li>
+
 
           @if (Auth::check())
           @if (Auth::user()->role == 1)
