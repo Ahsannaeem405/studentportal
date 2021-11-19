@@ -37,7 +37,7 @@ class AdvisorController extends Controller
             $img=$_FILES["img"]["name"];
             move_uploaded_file($_FILES["img"]["tmp_name"], $target_file);
 
-            dd(   $img);
+            // dd(   $img);
 
             $new =   Hash::make($request->cpassword);
             $pdo =   pdo();
@@ -50,7 +50,7 @@ class AdvisorController extends Controller
                 $request->name, $request->email, $request->number,  $new, $request->mon_start_time, $request->mon_end_time,
                 $request->tue_start_time, $request->tue_end_time, $request->wed_start_time, $request->wed_end_time, $request->thu_start_time,
                 $request->thu_end_time,   $request->fri_start_time,  $request->fri_end_time, $request->sat_start_time, $request->sat_end_time,
-                $request->sun_start_time,  $request->sun_end_time,  $img,  Auth::user()->id
+                $request->sun_start_time,  $request->sun_end_time, $img,  Auth::user()->id
             ]);
 
             return back()->with('success', 'Updated Successfully');

@@ -294,14 +294,13 @@ after someone embarrassed you , you might be even be thinking to take your own l
 
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                 <div class="member">
-                    <img src="assets/img/trainers/trainer-1.jpg" class="img-fluid" alt="">
+
+                    {{-- <img src="{{asset($row['img'])}}" class="img-fluid" alt=""> --}}
+                    <img src="images/<?php echo $row['img']?>" style="max-height: 58%; height: 58%;width: 100%;max-width: 100%;min-width: 100%;min-height: 58%;">
                     <div class="member-content">
                         <h4><?php echo htmlspecialchars($row['name']); ?></h4>
                         <span><?php echo htmlspecialchars($row['email']); ?></span>
-                        <p>
-                            Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis
-                            quaerat qui aut aut aut
-                        </p>
+
                         <div class="social">
                             <!-- Button trigger modal -->
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal"
