@@ -8,7 +8,7 @@
   <main id="main">
 
     <!-- ======= Breadcrumbs ======= -->
-    <div class="breadcrumbs" data-aos="fade-in">
+    <div class="breadcrumbs" style="    margin-top: 100px;" data-aos="fade-in">
       <div class="container">
         <h2>Privacy Policy</h2>
       </div>
