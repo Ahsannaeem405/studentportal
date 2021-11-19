@@ -25,6 +25,7 @@ class AdvisorController extends Controller
     {
 
         // dd($_FILES["img "]["name"]);
+        $img= null;
 
         $user = User::find(Auth::user()->id);
 
