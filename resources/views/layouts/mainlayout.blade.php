@@ -12,7 +12,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="{{asset('assets/img/favicon.png')}}" rel="icon">
+  <link href="{{asset('images/22.png')}}" rel="icon">
   <link href="{{asset('assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -50,7 +50,7 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <a href="{{url('/index')}}" class=" logo me-auto navbar-brand"><img src="{{asset('images/Student-Portal.png')}}" alt="" style="max-height: 70px"></a>
+      <a href="{{url('/index')}}" class=" logo me-auto navbar-brand"><img src="{{asset('images/22.png')}}" alt="" style="max-height: 70px"></a>
 
 
 
@@ -125,7 +125,7 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <img src="{{asset('images/Student-Portal.png')}}" alt="" style="max-height: 100px">
+            <img src="{{asset('images/22.png')}}" alt="" style="max-height: 100px; margin-left: -38px;">
             <p>
               A108 Adam Street <br>
               New York, NY 535022<br>
