@@ -72,7 +72,7 @@
           <li  class="nav-item"><a  href="{{url('/advisor_booking')}}" class="nav-link" id="Advisor">Advisor Booking</a></li>
           @else
           <li  class="nav-item"><a href="{{url('/booking')}}" class="nav-link" id="Booking">Booking</a></li>
-          {{-- <li  class="nav-item"><a href="{{url('/chat')}}" id="chat" class="nav-link">Chat</a></li> --}}
+          <li  class="nav-item"><a href="{{url('/chat')}}" id="chat" class="nav-link">Chat</a></li>
 
 
           @endif
