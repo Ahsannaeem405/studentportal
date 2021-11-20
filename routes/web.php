@@ -50,6 +50,11 @@ Route::get('showchat', [App\Http\Controllers\AdvisorController::class, 'showchat
 
 Route::post('sendMSG', [App\Http\Controllers\AdvisorController::class, 'sendMSG']);
 
+
+Route::post('contacts', [App\Http\Controllers\AdvisorController::class, 'contacts']);
+
+
+
 // });
 
 

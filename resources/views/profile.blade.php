@@ -44,6 +44,13 @@ $adv = App\Models\User::where('id', Auth::user()->id)->first();
                         {{ session()->get('success') }}
                     </div>
                 @endif
+                @if (session()->has('error'))
+                <div class="alert alert-danger">
+                    {{ session()->get('error') }}
+                </div>
+            @endif
+
+
 
                 <div class="col-lg-6 col-sm-6 col-12" style="padding:20px">
                     <label>Image:</label>

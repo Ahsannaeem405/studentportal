@@ -111,12 +111,20 @@
               <div class="row counters">
 
                 <div class="col-lg-6 col-6 text-center">
-                  <span data-purecounter-start="0" data-purecounter-end="1232" data-purecounter-duration="1" class="purecounter" style="color: #2179BB"></span>
+                    <?php
+
+                    $user = App\Models\User::where('role', 2 )->count();
+
+                    $adv = App\Models\User::where('role', 1 )->count();
+
+                    ?>
+
+                  <span data-purecounter-start="0" data-purecounter-end="{{$user}}" data-purecounter-duration="1" class="purecounter" style="color: #2179BB"></span>
                   <p>Users</p>
                 </div>
 
                 <div class="col-lg-6 col-6 text-center">
-                  <span data-purecounter-start="0" data-purecounter-end="64" data-purecounter-duration="1" class="purecounter" style="color: #2179BB"></span>
+                  <span data-purecounter-start="0" data-purecounter-end="{{   $adv}}" data-purecounter-duration="1" class="purecounter" style="color: #2179BB"></span>
                   <p>Advisors</p>
                 </div>
 
@@ -379,17 +387,17 @@ after someone embarrassed you , you might be even be thinking to take your own l
 
                 <div class="modal-body">
                     <div class="container">
-                        <select name="advis" id="" class="form-control">
+                        <select name="advis" id="" required class="form-control">
                             <option value="">Current Advisor</option>
                             <option value="<?php echo htmlspecialchars($row['name']); ?>"><?php echo htmlspecialchars($row['name']); ?></option>
 
                         </select><br>
                         <label for="">Start Time</label>
-                        <input type="time" name="start_time" class="form-control"><br>
+                        <input required type="time" name="start_time" class="form-control"><br>
                         <label for="">End Time</label>
-                        <input type="time" name="end_time" class="form-control"><br>
-                        <label for="">Date ofAppointment</label>
-                        <input type="date" name="date" class="form-control"><br>
+                        <input required type="time" name="end_time" class="form-control"><br>
+                        <label for="">Date of Appointment</label>
+                        <input required type="date" name="date" class="form-control"><br>
                         <input type="hidden" name="id" value="<?php echo htmlspecialchars($row['id']); ?>" id="">
                     </div>
                 </div>

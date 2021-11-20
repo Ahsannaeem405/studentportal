@@ -130,7 +130,7 @@
               A108 Adam Street <br>
               New York, NY 535022<br>
               United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
+              <strong>Phone:</strong> xxxx xxxx xxxx xxxx<br>
               <strong>Email:</strong> info@example.com<br>
             </p>
           </div>
@@ -150,11 +150,9 @@
 
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Join Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
+            <h4>About us</h4>
+            <p>only you can stop yourself don't stop yourself, conquer your own world no one can stop you. fight on hold on take it as fuel for your future as propulsion for this rocket called your life you can do it!.</p>
+
           </div>
 
         </div>

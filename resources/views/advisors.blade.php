@@ -140,17 +140,17 @@
 
                   <div class="modal-body">
                       <div class="container">
-                          <select name="advis" id="" class="form-control">
+                          <select name="advis" required id="" class="form-control">
                               <option value="">Current Advisor</option>
                               <option value="<?php echo htmlspecialchars($row['name']); ?>"><?php echo htmlspecialchars($row['name']); ?></option>
 
                           </select><br>
                           <label for="">Start Time</label>
-                          <input type="time" name="start_time" class="form-control"><br>
+                          <input required type="time" name="start_time" class="form-control"><br>
                           <label for="">End Time</label>
-                          <input type="time" name="end_time" class="form-control"><br>
+                          <input required type="time" name="end_time" class="form-control"><br>
                           <label for="">Date ofAppointment</label>
-                          <input type="date" name="date" class="form-control"><br>
+                          <input required type="date" name="date" class="form-control"><br>
                           <input type="hidden" name="id" value="<?php echo htmlspecialchars($row['id']); ?>" id="">
                       </div>
                   </div>

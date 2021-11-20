@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\contact_mail;
 use App\Models\Advisor;
 use App\Models\contactlists;
 use App\Models\User;
@@ -10,7 +11,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use PDO;
+use Session;
+
 use PDOException;
 use SebastianBergmann\Environment\Console;
 
@@ -56,9 +60,36 @@ class AdvisorController extends Controller
 
             return back()->with('success', 'Updated Successfully');
         } else {
-            return back()->with('success', 'Password Doesnt Match');
+            return back()->with('error', "Password Does't Match");
         }
     }
+
+
+
+  public function  contacts(Request $request){
+
+
+
+    $name =  $request->name;
+    $email = $request->email;
+    $subject =  $request->subject;
+    $message =   $request->message;
+
+    Session::put('subject', $subject);
+
+
+    $details = [
+        'title' =>  $name,
+        'body' => $message
+    ];
+
+    Mail::to(  $email)->send(new contact_mail($details));
+    // return view('emails.thanks');
+
+
+
+  }
+
 
 
     public function Available(Request $request)
