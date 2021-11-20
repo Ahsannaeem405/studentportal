@@ -96,6 +96,8 @@ class AdvisorController extends Controller
     {
 
 
+        $date = date('Y-m-d');
+
         $user = User::find(Auth::user()->id);
 
 
@@ -129,21 +131,23 @@ class AdvisorController extends Controller
 
         if ($contact == false && $contact2 == false) {
 
-            $sql = "INSERT INTO contactlists (sender, receiver) VALUES (?,?)";
+            $sql = "INSERT INTO contactlists (sender, receiver, created_at, updated_at) VALUES (?,?,?,?)";
             $stmt = $pdo->prepare($sql);
-            $stmt->execute([Auth::user()->id, $request->stuID]);
+            $stmt->execute([Auth::user()->id, $request->stuID, $date ,$date]);
 
             // $contactlist = new contactlists();
             // $contactlist->sender = Auth::user()->id;
             // $contactlist->receiver = $request->stuID;
             // $contactlist->save();
 
-        }
-dd($contact );
 
-        $sqlm = "INSERT INTO messages (sender, receiver, sender_read, message) VALUES (?,?,?,?)";
+        }
+
+
+
+        $sqlm = "INSERT INTO messages (sender, receiver, sender_read, message, created_at, updated_at) VALUES (?,?,?,?,?,?)";
         $stmt = $pdo->prepare($sqlm);
-        $stmt->execute([Auth::user()->id, $request->stuID, "1",$request->message ]);
+        $stmt->execute([Auth::user()->id, $request->stuID, "1", $request->message ,$date ,$date ]);
 
         // $message = new Message();
         // $message->sender = Auth::user()->id;
@@ -151,6 +155,10 @@ dd($contact );
         // $message->sender_read = "1";
         // $message->message = $request->message;
         // $message->save();
+
+        // dd($contact , $contact2, $request,  );
+
+
         return redirect('/chat?id=' . $request->stuID . '');
 
 
@@ -162,23 +170,23 @@ dd($contact );
 
 
 
-        $pdo =   pdo();
+        // $pdo =   pdo();
 
-        $contact1 = 'SELECT * FROM contactlists WHERE receiver ='.Auth::user()->id.' OR  sender ='.Auth::user()->id.' ';
+        // $contact1 = 'SELECT * FROM contactlists where receiver='.Auth::user()->id.' OR  sender='.Auth::user()->id.' ';
 
-        $contact = $pdo->query($contact1);
-        $contact->setFetchMode(PDO::FETCH_ASSOC);
+        // $contact = $pdo->query($contact1);
+        // $contact->setFetchMode(PDO::FETCH_ASSOC);
 
 
-        $message1 = 'SELECT * FROM messages WHERE sender ='.Auth::user()->id.' OR  receiver ='.Auth::user()->id.' ORDER BY id DESC Limit 1';
+        // $message1 = 'SELECT * FROM messages WHERE sender='.Auth::user()->id.' OR  receiver='.Auth::user()->id.' ORDER BY id DESC Limit 1';
 
-        $message = $pdo->query($message1);
-        $message->setFetchMode(PDO::FETCH_ASSOC);
+        // $message = $pdo->query($message1);
+        // $message->setFetchMode(PDO::FETCH_ASSOC);
 
-        // $contact = contactlists::where('sender', Auth::user()->id)->orwhere('receiver', Auth::user()->id)->get();
-        // $message = Message::where('sender', Auth::user()->id)->orwhere('receiver', Auth::user()->id)->orderBy('id', 'DESC')->limit(1)->get();
+        $contact = contactlists::where('sender', Auth::user()->id)->orwhere('receiver', Auth::user()->id)->get();
+        $message = Message::where('sender', Auth::user()->id)->orwhere('receiver', Auth::user()->id)->orderBy('id', 'DESC')->limit(1)->get();
 
-        return view('chat', ['contacts' => $contact, 'messages' => $message]);
+        return view('chat', compact('contact'));
     }
 
 

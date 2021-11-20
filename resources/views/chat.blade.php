@@ -494,20 +494,23 @@
 {{--                    <input type="text" class="form-control" placeholder="Search" aria-label="Recipient's username"--}}
 {{--                           aria-describedby="basic-addon2">--}}
 {{--                    <div class="input-group-append">--}}
-{{--                        <span class="input-group-text" id="basic-addon2"><i class="fas fa-search"></i></span>--}}
+{{--                       <span class="input-group-text" id="basic-addon2"><i class="fas fa-search"></i></span>--}}
 {{--                    </div>--}}
 {{--                </div>--}}
 {{--            </li>--}}
 
 {{-- @dd($contacts) --}}
 
-            {{-- @foreach ($contacts as $contact) --}}
-           <?php while ($contact = $contacts->fetch()): ?>
 
 
-                @if($contact['sender']==Auth::user()->id)
+
+            @foreach ($contact as $contact9)
+           {{-- <?php while ($contact9 = $contact->fetch()): ?> --}}
+
+
+                @if($contact9->sender ==Auth::user()->id)
                     @php
-                        $id= $contact['receiver'];
+                        $id= $contact9->receiver;
 
                         // $id=  $contact->receiver;
 
@@ -515,7 +518,7 @@
                 @else
 
                     @php
-                      $id= $contact['sender'];
+                      $id= $contact9->sender;
                         // $id=$contact->sender;
 
                     @endphp
@@ -534,13 +537,14 @@
                         {{--                        <small class="chat-alert text-muted"><i class="fa fa-reply"></i></small>--}}
                     </a>
                 </li>
-            {{-- @endforeach --}}
+            @endforeach
 
-            <?php endwhile; ?>
+            {{-- <?php endwhile; ?> --}}
 
 
         </ul>
     </div>
+
 
     <div id="main">
         <button class="openbtn" onclick="openNav()">☰</button>
@@ -557,24 +561,25 @@
 
                     <h4 class="mb-2">Contact list</h4>
 
-                <?php while ($contact = $contacts->fetch()): ?>
-                    {{-- @foreach ($contacts as $contact) --}}
+                {{-- <?php while ($contact = $contact->fetch()): ?> --}}
 
-                        @if($contact['sender']==Auth::user()->id)
-                            @php
-                                // $id= $row['receiver'];
-                                $id=   $contact['receiver'];
+                    @foreach ($contact as $contact9)
 
-                            @endphp
-                        @else
+                    @if($contact9->sender ==Auth::user()->id)
+                    @php
+                        $id= $contact9->receiver;
 
-                            @php
-                                // $id=$row['sender'];
-                                $id=  $contact['sender'];
+                        // $id=  $contact->receiver;
 
-                            @endphp
-                        @endif
+                    @endphp
+                @else
 
+                    @php
+                      $id= $contact9->sender;
+                        // $id=$contact->sender;
+
+                    @endphp
+                @endif
 
 
                         @php
@@ -593,6 +598,7 @@
                                              $msg = DB::select("select * from  messages where ((`sender`=$auth and `receiver`=$user->id) OR (`sender`=$user->id and `receiver`=$auth))  ORDER BY id DESC limit 1");
 
                                     @endphp
+
                                     <strong class="d-block">{{$msg[0]->message}}</strong>
                                 </div>
 
@@ -601,8 +607,8 @@
                         </li>
 
 
-                    {{-- @endforeach --}}
-                          <?php endwhile; ?>
+                    @endforeach
+                          {{-- <?php endwhile; ?> --}}
 
 
                 </ul>
@@ -876,7 +882,7 @@
 
 
       $('.nav-item').removeClass("active1");
-  $('#chat').addClass("active1");
+  $('#chat123').addClass("active1");
 
 
   });
