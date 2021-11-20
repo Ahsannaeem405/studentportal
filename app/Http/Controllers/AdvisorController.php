@@ -98,7 +98,7 @@ class AdvisorController extends Controller
 
         $user = User::find(Auth::user()->id);
 
-            $new =   Hash::make($request->cpassword);
+
             $pdo =   pdo();
 
             $sql = "UPDATE appointments SET status=? WHERE id=?";
@@ -139,7 +139,7 @@ class AdvisorController extends Controller
             // $contactlist->save();
 
         }
-
+dd($contact );
 
         $sqlm = "INSERT INTO messages (sender, receiver, sender_read, message) VALUES (?,?,?,?)";
         $stmt = $pdo->prepare($sqlm);
