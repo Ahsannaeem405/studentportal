@@ -298,6 +298,9 @@ after someone embarrassed you , you might be even be thinking to take your own l
                     {{-- <img src="{{asset($row['img'])}}" class="img-fluid" alt=""> --}}
                     @if(isset($row['img']))
                     <img src="images/<?php echo $row['img']?>" style="max-height: 58%; height: 58%;width: 100%;max-width: 100%;min-width: 100%;min-height: 58%;">
+                    @else
+                    <img src="images/avatar.png" style="max-height: 58%; height: 58%;width: 100%;max-width: 100%;min-width: 100%;min-height: 58%;">
+
                     @endif
                     <div class="member-content">
                         <h4><?php echo htmlspecialchars($row['name']); ?></h4>
