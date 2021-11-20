@@ -176,5 +176,16 @@
   <?php endwhile; ?>
 
 
+  <script>
+    $(document).ready(function () {
+
+
+        $('.nav-item').removeClass("active1");
+    $('#advisor').addClass("active1");
+
+
+    });
+</script>
+
 
 @endsection
