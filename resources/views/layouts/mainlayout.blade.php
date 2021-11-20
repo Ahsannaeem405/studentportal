@@ -65,7 +65,7 @@
           <li  class="nav-item"><a href="{{url('/about')}}" id="About"  class="nav-link" >About</a></li>
           <li  class="nav-item"><a href="{{url('/contact')}}" id="Contact" class="nav-link">Contact us</a></li>
           <li  class="nav-item"><a href="{{url('/privacy')}}" id="Rules" class="nav-link">Rules</a></li>
-          <li  class="nav-item"><a href="{{url('/privacy')}}" id="advisor" class="nav-link">Advisor</a></li>
+          <li  class="nav-item"><a href="{{url('/advisor')}}" id="advisor" class="nav-link">Advisor</a></li>
 
 
           @if (Auth::check())
