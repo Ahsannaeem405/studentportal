@@ -184,7 +184,7 @@ class AdvisorController extends Controller
         // $message->setFetchMode(PDO::FETCH_ASSOC);
 
         $contact = contactlists::where('sender', Auth::user()->id)->orwhere('receiver', Auth::user()->id)->get();
-        $message = Message::where('sender', Auth::user()->id)->orwhere('receiver', Auth::user()->id)->orderBy('id', 'DESC')->limit(1)->get();
+        // $message = Message::where('sender', Auth::user()->id)->orwhere('receiver', Auth::user()->id)->orderBy('id', 'DESC')->limit(1)->get();
 
         return view('chat', compact('contact'));
     }
