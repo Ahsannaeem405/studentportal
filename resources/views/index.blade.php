@@ -295,6 +295,15 @@ after someone embarrassed you , you might be even be thinking to take your own l
                     {{ session()->get('success') }}
                 </div>
             @endif
+
+
+            @if (session()->has('error'))
+                <div class="alert alert-danger">
+                    {{ session()->get('error') }}
+                </div>
+            @endif
+
+
             <?php while ($row = $q->fetch()): ?>
 
 

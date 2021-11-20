@@ -279,7 +279,7 @@ $pdo =   pdo();
 
                 return back()->with('success', 'Appointment submitted successfull');
             } else {
-                return back()->with('success', 'Advisor dosnt available this time');
+                return back()->with('error', "Advisor does't available this time");
             }
         } elseif ($day == 'Tue') {
 
@@ -300,7 +300,7 @@ $pdo =   pdo();
 
                 return back()->with('success', 'Appointment submitted successfull');
             } else {
-                return back()->with('success', 'Advisor dosnt available this time');
+                return back()->with('error', "Advisor does't available this time");
             }
         } elseif ($day == 'Wed') {
 
@@ -321,7 +321,7 @@ $pdo =   pdo();
 
                 return back()->with('success', 'Appointment submitted successfull');
             } else {
-                return back()->with('success', 'Advisor dosnt available this time');
+                return back()->with('error', "Advisor does't available this time");
             }
         } elseif ($day == 'Thu') {
 
@@ -341,7 +341,7 @@ $pdo =   pdo();
 
                 return back()->with('success', 'Appointment submitted successfull');
             } else {
-                return back()->with('success', 'Advisor dosnt available this time');
+                return back()->with('error', "Advisor does't available this time");
             }
         } elseif ($day == 'Fri') {
 
@@ -362,7 +362,7 @@ $pdo =   pdo();
 
                 return back()->with('success', 'Appointment submitted successfull');
             } else {
-                return back()->with('success', 'Advisor dosnt available this time');
+                return back()->with('error', "Advisor does't available this time");
             }
         } elseif ($day == 'Sat') {
 
@@ -383,7 +383,7 @@ $pdo =   pdo();
 
                 return back()->with('success', 'Appointment submitted successfull');
             } else {
-                return back()->with('success', 'Advisor dosnt available this time');
+                return back()->with('error', "Advisor does't available this time");
             }
         } else {
 
@@ -403,7 +403,7 @@ $pdo =   pdo();
 
                 return back()->with('success', 'Appointment submitted successfull');
             } else {
-                return back()->with('success', 'Advisor dosnt available this time');
+                return back()->with('error', "Advisor does't available this time");
             }
         }
     }
